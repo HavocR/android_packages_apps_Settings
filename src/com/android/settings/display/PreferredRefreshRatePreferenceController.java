@@ -65,8 +65,7 @@ public class PreferredRefreshRatePreferenceController extends BasePreferenceCont
         Display.Mode[] modes = mContext.getDisplay().getSupportedModes();
         for (Display.Mode m : modes) {
             if (m.getPhysicalWidth() == mode.getPhysicalWidth() &&
-                    m.getPhysicalHeight() == mode.getPhysicalHeight() &&
-                    m.getRefreshRate() >= 60.0f) {
+                    m.getPhysicalHeight() == mode.getPhysicalHeight()) {
                 entries.add(String.format("%.02fHz", m.getRefreshRate())
                         .replaceAll("[\\.,]00", ""));
                 values.add(String.format(Locale.US, "%.02f", m.getRefreshRate()));
